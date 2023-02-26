@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // Main page
 Route::get('/main', function () {
-    return view('/main/main');
+    return view('/main/home');
 });
 
 //Sign-in Page

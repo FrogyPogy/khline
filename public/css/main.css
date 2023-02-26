@@ -1,0 +1,16 @@
+.cmt {
+    margin-top: 500px;
+}
+.cm {
+    margin-left: 150px;
+}
+.auto-end {
+    position: relative;
+    margin-inline-start: 1300px;
+}
+.main-bg {
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url("../images/main_bg.png");
+    background-position: center;
+}
