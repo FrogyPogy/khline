@@ -8,9 +8,12 @@
     position: relative;
     margin-inline-start: 1300px;
 }
-.main-bg {
-    position: relative;
+.bg-main {
+    background-image: url("../images/main-bg.png");
+    position: static;
+    background-position: center top;
     background-repeat: no-repeat;
-    background-image: url("../images/main_bg.png");
-    background-position: center;
+    background-size: cover, contain;
+    height: 90%;
+    width: 100%;
 }

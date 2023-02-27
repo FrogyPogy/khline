@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\posts;
+use App\Http\Controllers\PostsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Main page
-Route::get('/main', function () {
-    return view('/main/home');
-});
+Route::get('/home', [PostsController::class, 'index']);
 
 //Sign-in Page
 Route::get('/sign-in',function(){
