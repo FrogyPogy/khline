@@ -34,7 +34,22 @@
         </div>
         </div>
         <div class="container mt-5 cm">
+            <!-- Example single danger button -->
+            <div class="btn-group">
+            <button type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">
+                --pilih kategori--
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Warisan</a></li>
+                <li><a class="dropdown-item" href="#">Korupsi</a></li>
+                <li><a class="dropdown-item" href="#">Sertifikat</a></li>
+                <li><a class="dropdown-item" href="#">HAM</a></li>
+            </ul>
+            </div>
+            <div class="mt-3">
                 @yield('container')
+            </div>
+                
         </div>
        
         
