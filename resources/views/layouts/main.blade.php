@@ -26,31 +26,83 @@
                     <p>Tanyakan Permasalahan Hukum Anda Disini</p>
                 </div>
                 <div class="mt-3">
-                    <a class="btn btn-primary "href="#">+ Ajukan pertanyaan</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajukan Pertanyaan</button>
                 </div>
                 <div class="mb-3 cmt">
                     Lihat Selengkapnya
                 </div>
         </div>
+    </div>
+    <div class="container mt-5 cm">
+
+        <div class="btn-group">
+        <button type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">
+            --pilih kategori--
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Warisan</a></li>
+            <li><a class="dropdown-item" href="#">Korupsi</a></li>
+            <li><a class="dropdown-item" href="#">Sertifikat</a></li>
+            <li><a class="dropdown-item" href="#">HAM</a></li>
+        </ul>
         </div>
-        <div class="container mt-5 cm">
-            <!-- Example single danger button -->
-            <div class="btn-group">
-            <button type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="true">
-                --pilih kategori--
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Warisan</a></li>
-                <li><a class="dropdown-item" href="#">Korupsi</a></li>
-                <li><a class="dropdown-item" href="#">Sertifikat</a></li>
-                <li><a class="dropdown-item" href="#">HAM</a></li>
-            </ul>
-            </div>
-            <div class="mt-3">
-                @yield('container')
-            </div>
-                
+        <div class="mt-3">
+            @yield('container')
+        </div>         
+    </div>
+    <!--Modal pertanyaan-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header border-0">
+            <h1 class="modal-title fs-3" id="exampleModalLabel">Kolom Pengajuan</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+            <form>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Nama</label>
+                <input type="text" class="form-control" id="input-name">
+            </div>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Email</label>
+                <input type="text" class="form-control" id="input-email"></input>
+            </div>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Judul</label>
+                <input type="text" class="form-control" id="input-judul"></input>
+            </div>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Kategori kasus</label>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                        --pilih kategori kasus--
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Warisan</a></li>
+                        <li><a class="dropdown-item" href="#">Korupsi</a></li>
+                        <li><a class="dropdown-item" href="#">Sertifikat</a></li>
+                        <li><a class="dropdown-item" href="#">HAM</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Provinsi</label>
+                <input type="text" class="form-control" id="input-kategori"></input>
+            </div>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Pertanyaan</label>
+                <textarea class="form-control" id="message-text"></textarea>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Kirim Pertanyaan</button>
+        </div>
+        </div>
+    </div>
+    </div>
        
         
 </body>

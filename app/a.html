@@ -1,0 +1,19 @@
+$table->id(); $table->string('judul'); $table->string('slug')->unique();
+$table->string('penanya'); $table->string('email'); $table->string('kategori');
+$table->integer('kode_provinsi'); $table->text('pertanyaan');
+$table->timestamp('published_at')->nullable(); $table->timestamps();
+posts::create([ 'judul' => 'Pertanyaan Pertama', 'slug' => 'pertanyaan-pertama',
+'penanya' => 'Budi', 'email' => 'budi@gmail.com' 'kategori' => 'warisan',
+'kode_provinsi' => 24 'pertanyaan' => 'Lorem ipsum dolor sit amet consectetur,
+adipisicing elit. Distinctio odit unde dolor nisi autem minus nemo. Laudantium
+sapiente perspiciatis pariatur nobis facere blanditiis, vero quibusdam
+dignissimos asperiores id dolorum, dicta, nulla molestiae earum deleniti nihil
+ut neque reprehenderit minima enim unde esse suscipit placeat? Error accusamus
+iste distinctio voluptas doloremque.' ]) posts::create([ 'judul' => 'Pertanyaan
+Kedua', 'slug' => 'pertanyaan-kedua', 'penanya' => 'jack', 'email' =>
+'jack@gmail.com' 'kategori' => 'korupsi', 'kode_provinsi' => 25 'pertanyaan' =>
+'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio odit unde
+dolor nisi autem minus nemo. Laudantium sapiente perspiciatis pariatur nobis
+facere blanditiis, vero quibusdam dignissimos asperiores id dolorum, dicta,
+nulla molestiae earum deleniti nihil ut neque reprehenderit minima enim unde
+esse suscipit placeat? Error accusamus iste distinctio voluptas doloremque.' ])

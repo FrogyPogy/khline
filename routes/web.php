@@ -16,6 +16,8 @@ use App\Http\Controllers\PostsController;
 
 // Main page
 Route::get('/home', [PostsController::class, 'index']);
+// Main Page-answer
+Route::get('/home/{post:slug}', [PostsController::class, 'showAnswer']);
 
 //Sign-in Page
 Route::get('/sign-in',function(){

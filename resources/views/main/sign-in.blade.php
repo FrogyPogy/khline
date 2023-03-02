@@ -15,7 +15,7 @@
             <div class="col-md-7 mt-5">
                 <div class="text-align:center">
                 <div class="card mx-auto row d-flex justify-content-center" style="width: 25rem;"> 
-                    <h5 class="card-title" style="text-align:center">Sign In Here</h5>   
+                    <h4 class="card-title" style="text-align:center">Sign In Here</h4>   
                     <div class="mt-3 mb-4">
                         <label for="formGroupExampleInput" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" placeholder="joy123@mail.com">
@@ -25,7 +25,8 @@
                         <input type="password" class="form-control" id="password" placeholder="******">
                     </div>
                     <div class="mb-4">
-                        <button class="btn btn-primary" type="submit">Sign-in</button>
+                        <a href="home" class="btn btn-danger">Back</a>
+                        <button class="btn btn-primary ms-2" type="submit">Sign-in</button>
                     </div>
                 </div>
             </div>
