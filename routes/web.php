@@ -17,8 +17,9 @@ use App\Http\Controllers\PostsController;
 // Main page
 Route::get('/home', [PostsController::class, 'index']);
 // Main Page-answer
-Route::get('/home/{post:slug}', [PostsController::class, 'showAnswer']);
-
+Route::get('/home/{post:id}', [PostsController::class, 'showAnswer']);
+// Create new Posts
+Route::resource('/home',PostsController::class);
 //Sign-in Page
 Route::get('/sign-in',function(){
     return view('/main/sign-in');
@@ -93,9 +94,3 @@ Route::get('st_laporan',function(){
 Route::get('st_notif',function(){
     return view('/struktural/struktural_notifikasi');
 });
-
-
-
-
-
-

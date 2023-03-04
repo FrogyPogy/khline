@@ -19,5 +19,18 @@ class PostsController extends Controller
             "posted" => $post
         ]);
     }
+    
+    public function store(Request $request){
+        $pertanyaan = new posts;
+        $pertanyaan->judul = $request->input_judul;
+        $pertanyaan->slug = $request->input_slug;
+        $pertanyaan->penanya = $request->input_nama;
+        $pertanyaan->email = $request->input_email;
+        $pertanyaan->kategori = $request->kategori;
+        $pertanyaan->pertanyaan = $request->input_pertanyaan;
+        $pertanyaan->kode_provinsi = $request->input_provinsi;
+        $pertanyaan->save();
 
+        return redirect('/home');
+    }
 }

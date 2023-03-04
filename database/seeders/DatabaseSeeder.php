@@ -16,18 +16,23 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         posts::create([
-            'judul' => 'Pertanyaan Pertama',
+            'judul' => 'Pertanyaan pertama',
             'slug' => 'pertanyaan-pertama',
             'penanya' => 'jack',
             'email' => 'jack@gmail.com',
-            'kategori' => 'warisan',
-            'kode_provinsi' => 24,
-            'pertanyaan' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Distinctio odit unde dolor nisi autem minus nemo. Laudantium sapiente
-             perspiciatis pariatur nobis facere blanditiis, vero quibusdam dignissimos
-            asperiores id dolorum, dicta, nulla molestiae earum deleniti nihil ut neque
-            reprehenderit minima enim unde esse suscipit placeat? Error accusamus iste
-            distinctio voluptas doloremque.'
+            'kategori' => 'Warisan',
+            'kode_provinsi' => 20,
+            'pertanyaan' => 'Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Labore sed non ea placeat. Iure nostrum alias fuga nihil labore
+            culpa ex provident voluptas nam, in laborum consequatur minus itaque
+            vero libero deserunt! At, sit. Error, officia repudiandae.
+            Atque similique culpa commodi, suscipit error ipsa, placeat dolorum
+            oluptatem vel magnam perspiciatis quidem quia eos quos recusandae delectus.
+            Itaque doloremque iusto natus harum aperiam cumque, praesentium inventore
+            placeat fugit quibusdam earum perferendis ea impedit. Sit quas incidunt
+            tempore animi iusto tempora eum libero doloremque repellendus obcaecati
+            ab accusamus iure hic eius ipsa earum ex praesentium aspernatur aliquid,
+            unde est? Neque, incidunt earum?'
         ]);
 
         Answer::create([
