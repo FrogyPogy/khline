@@ -1,16 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-sc
-    ale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <html lang="en" data-bs-theme="dark">
-    <title>Konsultasi | Admin-Pertanyaan</title>
-</head>
-<body>
-    <h3>Pertanyaan Masuk</h3>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</html>
+@extends('layouts.dashboard')
+
+@section('institute_div')
+    Bidang Hukum
+@endsection
+
+@section('institute')
+    Kemenkumham Jateng
+@endsection
+
+@section('user_page')
+    Admin Dashboard
+@endsection
+
+@section('email_user')
+    admin@mail.com
+@endsection
+
+@section('currentpage')
+    <h2>Pertanyaan Masuk</h2>
+@endsection
+
+@section('container')
+    <div class="h5 mt-5 mb-4 w-100">Daftar Pertanyaan Masuk</div>
+    <div class="card p-4 rounded-4">
+    <table id="example" class="table rounded-1" style="width:100%">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+
+@endsection

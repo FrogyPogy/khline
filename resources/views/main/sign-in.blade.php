@@ -26,7 +26,7 @@
                     </div>
                     <div class="mb-4">
                         <a href="home" class="btn btn-danger">Back</a>
-                        <button class="btn btn-primary ms-2" type="submit">Sign-in</button>
+                        <a class="btn btn-primary ms-2" type="submit" href="/admin">Sign-in</a>
                     </div>
                 </div>
             </div>

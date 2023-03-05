@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\posts;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,35 +18,28 @@ use App\Http\Controllers\PostsController;
 */
 
 // Main page
-Route::get('/home', [PostsController::class, 'index']);
+Route::get('home', [PostsController::class, 'index']);
 // Main Page-answer
-Route::get('/home/{post:id}', [PostsController::class, 'showAnswer']);
+Route::get('home/{post:id}', [PostsController::class, 'showAnswer']);
 // Create new Posts
-Route::resource('/home',PostsController::class);
+Route::resource('home',PostsController::class);
 //Sign-in Page
-Route::get('/sign-in',function(){
-    return view('/main/sign-in');
-});
+Route::get('sign-in',[LoginController::class, 'index']);
+//Register;
+Route::get('register',[RegisterController::class, 'index']);
+Route::post('register',[RegisterController::class, 'store']);
 
 //Admin-dashboard
-Route::get('/admin_d',function(){
-    return view('/admin/admin_dashboard');
-});
+Route::get('/admin',[AdminController::class, 'dashboard']);
 
-//Admin-anggota
-Route::get('/admin_a',function(){
-    return view('/admin/admin_anggota');
-});
+// //Admin-anggota
+Route::get('anggota',[AdminController::class, 'anggota']);
 
 //Admin-laporan
-Route::get('/admin_l',function(){
-    return view('/admin/admin_laporan');
-});
+Route::get('laporan',[AdminController::class, 'laporan']);
 
 //Admin-pertanyaan
-Route::get('/admin_p',function(){
-    return view('/admin/admin_pertanyaan');
-});
+Route::get('pertanyaan',[AdminController::class, 'pertanyaan']);
 
 //Admin-Settings
 Route::get('/admin_s',function(){

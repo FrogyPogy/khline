@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg mt-2 position-static">
+<nav class="navbar navbar-expand-lg mt-2">
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav position-static grid gap-3 auto-end">
+            <div class="navbar-nav position-relative grid gap-3 ms-auto mx-5">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <a class="nav-link" href="#">About Us</a>
                 <a class="nav-link" href="#">Contact</a>
