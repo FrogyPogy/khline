@@ -8,6 +8,14 @@
     Kemenkumham Jateng
 @endsection
 
+@section('item2')
+    Anggota
+@endsection
+
+@section('item3')
+    Pertanyaan
+@endsection
+
 @section('user_page')
     Admin Dashboard
 @endsection

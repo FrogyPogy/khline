@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\Password;
+use App\Models\User;
 
 class RegisterController extends Controller
 {
@@ -13,7 +15,21 @@ class RegisterController extends Controller
         ]);
     }
 
-    public function store(){
-        return request()->all();
+    public function store(Request $request){
+        $validatedData = $request->validate([
+            'nama' => ['required','min:3','max:255'],
+            'email' => ['required', 'email:dns', 'unique:users'],
+            'password' => ['required', Password::min(8)->letters()->numbers()],
+            'jabatan' => ['required']
+        ]);
+        //Encrypt Data with Bcrypt
+        $validatedData['password'] = bcrypt($validatedData['password']);
+        
+        User::create($validatedData);
+
+        //Send session for notification success register
+        $request->session()->flash('success', 'Anggota Berhasil Ditambahkan!');
+
+        return redirect('anggota');
     }
 }

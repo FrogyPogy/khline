@@ -1,18 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-sc
-    ale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <html lang="en" data-bs-theme="dark">
+@extends('layouts.dashboard')
 
-    <title>Penyuluh | Dashboard</title>
-</head>
-<body>
+@section('institute_div')
+    Bidang Hukum
+@endsection
 
-    <h3>Selamat Datang di Halaman Dashboard</h3>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</html>
+@section('institute')
+    Kemenkumham Jateng
+@endsection
+
+@section('item2')
+    Notifikasi
+@endsection
+
+@section('item3')
+    Evaluasi
+@endsection
+
+@section('user_page')
+    Penyuluh Dashboard
+@endsection
+
+@section('email_user')
+    Budi@mail.com
+@endsection
+
+@section('currentpage')
+    <h2>Dashboard</h2>
+@endsection
+
+@section('container')
+    <div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
+        <div class="col">
+          <div class="card rounded-4  ">
+            <div class="card-body">
+              <p class="text-center">Total Konsultasi</p>
+              <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card rounded-4 ">
+            <div class="card-body">
+              <p class="text-center">Terjawab</p>
+              <canvas id="myChart4" style="width:100%;max-width:600px"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
+        <div class="col">
+          <div class="card rounded-4  ">
+            <div class="card-body">
+              <p class="text-center">Sedang Verifikasi</p>
+              <canvas id="myChart5" style="width:100%;max-width:600px"></canvas>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card rounded-4 ">
+            <div class="card-body">
+              <p class="text-center">Evaluasi Jawaban/p>
+              <canvas id="myChart6" style="width:100%;max-width:600px"></canvas>
+            </div>
+          </div>
+        </div>
+    </div>
+
+@endsection

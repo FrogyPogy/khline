@@ -8,6 +8,14 @@
     Kemenkumham Jateng
 @endsection
 
+@section('item2')
+    Anggota
+@endsection
+
+@section('item3')
+    Pertanyaan
+@endsection
+
 @section('user_page')
     Admin Dashboard
 @endsection
@@ -25,7 +33,7 @@
         <div class="col">
           <div class="card rounded-4  ">
             <div class="card-body">
-              <p class="text-center">Jumlah Mahasiswa Cuti</p>
+              <p class="text-center">Total Konsultasi</p>
               <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
             </div>
           </div>
@@ -34,7 +42,7 @@
         <div class="col">
           <div class="card rounded-4 ">
             <div class="card-body">
-              <p class="text-center">Jumlah Mahasiswa Lulus</p>
+              <p class="text-center">Pertanyaan Masuk</p>
               <canvas id="myChart4" style="width:100%;max-width:600px"></canvas>
             </div>
           </div>
@@ -45,28 +53,12 @@
         <div class="col">
           <div class="card rounded-4  ">
             <div class="card-body">
-              <p class="text-center">Jumlah Mahasiswa Undur Diri</p>
+              <p class="text-center">Terjawab</p>
               <canvas id="myChart5" style="width:100%;max-width:600px"></canvas>
             </div>
           </div>
         </div>
         
-        <div class="col">
-          <div class="card rounded-4 ">
-            <div class="card-body">
-              <p class="text-center">Jumlah Mahasiswa Drop Out</p>
-              <canvas id="myChart6" style="width:100%;max-width:600px"></canvas>
-            </div>
-          </div>
-        </div>
     </div>
-
-    <!-- <br>
-    <div class="h5 mt-4 mb-4 w-100">Data Mahasiswa</div>
-    <div class="card p-4 rounded-4">
-    <table id="example" class="table rounded-3" style="width:100%">
-        <thead></thead>
-        <tbody></tbody>
-    </table> -->
 
 @endsection

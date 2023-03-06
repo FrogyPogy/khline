@@ -6,6 +6,9 @@ use App\Http\Controllers\PostsController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\JftController;
+use App\Http\Controllers\StrukturalController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,8 +29,8 @@ Route::resource('home',PostsController::class);
 //Sign-in Page
 Route::get('sign-in',[LoginController::class, 'index']);
 //Register;
-Route::get('register',[RegisterController::class, 'index']);
-Route::post('register',[RegisterController::class, 'store']);
+Route::get('/register',[RegisterController::class, 'index']);
+Route::post('/register',[RegisterController::class, 'store']);
 
 //Admin-dashboard
 Route::get('/admin',[AdminController::class, 'dashboard']);
@@ -42,51 +45,33 @@ Route::get('laporan',[AdminController::class, 'laporan']);
 Route::get('pertanyaan',[AdminController::class, 'pertanyaan']);
 
 //Admin-Settings
-Route::get('/admin_s',function(){
-    return view('/admin/admin_settings');
-});
+// Route::get('/admin_s',function(){
+//     return view('/admin/admin_settings');
+// });
 
 //Penyuluh-dashboard
-Route::get('/jft_dash',function(){
-    return view('/penyuluh/penyuluh_dashboard');
-});
+Route::get('jft_dash',[JftController::class, 'dashboard']);
 
 //Penyuluh-notifikasi
-Route::get('/jft_notif',function(){
-    return view('/penyuluh/penyuluh_notifikasi');
-});
+Route::get('jft_notif',[JftController::class, 'notifikasi']);
 
 //Penyuluh-laporan
-Route::get('/jft_lapor',function(){
-    return view('/penyuluh/penyuluh_laporan');
-});
+Route::get('jft_lapor',[JftController::class, 'laporan']);
 
 //Penyuluh-evaluasi
-Route::get('jft_eval',function(){
-    return view('/penyuluh/penyuluh_evaluasi');
-});
+Route::get('jft_eval',[JftController::class, 'evaluasi']);
 
 //Penyuluh-riwayat
-Route::get('jft_riwayat',function(){
-    return view('/penyuluh/penyuluh_riwayat');
-});
+// Route::get('jft_riwayat',JftController::class, 'riwayat');
 
 //Struktural-dashboard
-Route::get('st_dash',function(){
-    return view('/struktural/struktural_dashboard');
-});
+Route::get('st_dash',[StrukturalController::class, 'dashboard']);
 
 //Struktural-evaluasi
-Route::get('st_eval',function(){
-    return view('/struktural/struktural_evaluasi');
-});
+Route::get('st_eval',[StrukturalController::class, 'evaluasi']);
 
 //Struktural-laporan
-Route::get('st_laporan',function(){
-    return view('/struktural/struktural_laporan');
-});
+Route::get('st_lapor',[StrukturalController::class, 'laporan']);
 
 //Struktural-notifikasi
-Route::get('st_notif',function(){
-    return view('/struktural/struktural_notifikasi');
-});
+Route::get('st_notif',[StrukturalController::class, 'notifikasi']);

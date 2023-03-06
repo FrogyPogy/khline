@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\posts;
 use App\Models\Answer;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +16,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'nama' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('superadmin123'),
+            'jabatan' => 'Penyuluh Hukum Muda',
+            'roles' => 'admin'
+        ]);
+
         posts::create([
             'judul' => 'Pertanyaan pertama',
             'slug' => 'pertanyaan-pertama',

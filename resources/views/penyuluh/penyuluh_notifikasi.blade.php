@@ -9,27 +9,27 @@
 @endsection
 
 @section('item2')
-    Anggota
+    Notifikasi
 @endsection
 
 @section('item3')
-    Pertanyaan
+    Evaluasi
 @endsection
 
 @section('user_page')
-    Admin Dashboard
+    Penyuluh Dashboard
 @endsection
 
 @section('email_user')
-    admin@mail.com
+    Budi@mail.com
 @endsection
 
 @section('currentpage')
-    <h2>Pertanyaan Masuk</h2>
+    <h2>Notifikasi Masuk</h2>
 @endsection
 
 @section('container')
-    <div class="h5 mt-5 mb-4 w-100">Daftar Pertanyaan Masuk</div>
+    <div class="h5 mt-5 mb-4 w-100">Notifikasi Masuk</div>
     <div class="card p-4 rounded-4">
     <table id="example" class="table rounded-1" style="width:100%">
         <thead></thead>
