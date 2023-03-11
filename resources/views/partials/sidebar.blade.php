@@ -5,6 +5,7 @@
     </div>@yield('institute')</div>
     </div>
     <ul class="nav-list" id="nav-list">
+      @auth
       <li>
         <a class="nav-link active" href='admin'>
           <i class='bx bx-grid-alt'></i>
@@ -35,20 +36,24 @@
      </li>
 	 
      <li>
-       <a class="nav-link" href='/home'>
-         <i class="bi bi-box-arrow-right"></i>
+      <form action="/sign-out" method="post">
+        @csrf
+        <button type="submit" class="nav-link">
+        <i class="bi bi-box-arrow-right"></i>
          <span class="links_name">Keluar</span>
-       </a>
+</button>
+      </form>
        <span class="tooltip">Keluar</span>
      </li>
      <li class="profile">
         <div class="profile-details">
            <div class="name_job">
-              <div class="name">@yield('user_page')</div>
-              <div class="email">@yield('email_user')</div>
+              <div class="name">{{ auth()->User()->nama }}</div>
+              <div class="email">{{ auth()->User()->email }}</div>
            </div>
          </div>
          <i class="fa fa-bars" id="bars"></i>>
      </li>
+     @endauth
     </ul>
   </div>

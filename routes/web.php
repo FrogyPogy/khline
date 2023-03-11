@@ -21,23 +21,26 @@ use App\Http\Controllers\StrukturalController;
 */
 
 // Main page
-Route::get('home', [PostsController::class, 'index']);
+Route::get('home', [PostsController::class, 'index'])->middleware('guest');
 // Main Page-answer
-Route::get('home/{post:id}', [PostsController::class, 'showAnswer']);
+Route::get('home/{post:id}', [PostsController::class, 'showAnswer'])->middleware('guest');
 // Create new Posts
-Route::resource('home',PostsController::class);
+Route::resource('home',PostsController::class)->middleware('guest');
 //Sign-in Page
-Route::get('sign-in',[LoginController::class, 'index']);
+Route::get('/sign-in',[LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/sign-in',[LoginController::class, 'authenticate']);
+Route::post('/sign-out',[LoginController::class,'signOut']);
+
 //Register;
 Route::get('/register',[RegisterController::class, 'index']);
 Route::post('/register',[RegisterController::class, 'store']);
 
 //Admin-dashboard
-Route::get('/admin',[AdminController::class, 'dashboard']);
+Route::get('/admin',[AdminController::class, 'dashboard'])->middleware('auth');
 
 // //Admin-anggota
 Route::get('anggota',[AdminController::class, 'anggota']);
-
+ 
 //Admin-laporan
 Route::get('laporan',[AdminController::class, 'laporan']);
 

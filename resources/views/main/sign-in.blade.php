@@ -9,27 +9,54 @@
     <title>Konsultasi | Sign-In</title>
 </head>
 <body>
-    
     <div class="container mt-5">
         <div class="row d-flex justify-content-center">
             <div class="col-md-7 mt-5">
+
+            
+    @if(session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close">   
+            </button>
+        </div>
+    @endif
+    
+    @if(session()->has('loginError'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('loginError') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close">   
+            </button>
+        </div>
+    @endif  
+
+
+    
+            <form action="/sign-in" method="post">
+                @csrf
                 <div class="text-align:center">
                 <div class="card mx-auto row d-flex justify-content-center" style="width: 25rem;"> 
                     <h4 class="card-title" style="text-align:center">Sign In Here</h4>   
                     <div class="mt-3 mb-4">
                         <label for="formGroupExampleInput" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="joy123@mail.com">
+                        <input type="email" name="email" class="form-control @error('email') 
+                        is-invalid @enderror" id="email" placeholder="joy123@mail.com" autofocus 
+                        required value="{{ old('email') }}">
+                        @error('email')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="mb-4">
                         <label for="formGroupExampleInput2" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="******">
+                        <input type="password" name="password" class="form-control" id="password" placeholder="******" required>
                     </div>
                     <div class="mb-4">
                         <a href="home" class="btn btn-danger">Back</a>
-                        <a class="btn btn-primary ms-2" type="submit" href="/admin">Sign-in</a>
+                        <button type="submit" class="btn btn-primary ms-2" >Sign-in</button>
                     </div>
                 </div>
-            </div>
+                </div>
+            </form>
             </div>
         </div>
     </div>

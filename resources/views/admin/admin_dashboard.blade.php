@@ -16,14 +16,6 @@
     Pertanyaan
 @endsection
 
-@section('user_page')
-    Admin Dashboard
-@endsection
-
-@section('email_user')
-    admin@mail.com
-@endsection
-
 @section('currentpage')
     <h2>Dashboard</h2>
 @endsection
