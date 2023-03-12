@@ -55,40 +55,18 @@
         </thead>
 
         <tbody>
-        <tr>
-          <td><h5>Jessie Clarcson</h5>
-            <p>Penyuluh Hukum Muda</p></td>
-          <td>20</td>
-          <td>sedang menjawab</td>
-          <td>
-            <button type="button" class="btn btn-primary">edit</button>
-            <button type="button" class="btn btn-danger">hapus</button>
-          </td>
-        </tr>
-        <tr>
-          <td><h5>Lawrence</h5>
-            <p>Penyuluh Hukum Muda</p></td>
-          <td>15</td>
-          <td>ready</td>
-          <td>
-            <button type="button" class="btn btn-primary">edit</button>
-            <button type="button" class="btn btn-danger">hapus</button>
-          </td>
-        </tr>
-        <tr>
-          <td><h5>Brad Simmons</h5>
-            <p>Penyuluh Hukum Madya</p></td>
-          <td>20</td>
-          <td>sedang menjawab</td>
-          <td>
-            <button type="button" class="btn btn-primary">edit</button>
-            <button type="button" class="btn btn-danger">hapus</button>
-          </td>
-        </tr>
-
-
-
-      
+        @foreach($anggota as $a)
+          <tr>
+            <td><h5>{{ $a->nama }}</h5>
+              <p>{{ $a->jabatan }}</p></td>
+            <td>20</td>
+            <td>{{ $a->status }}</td>
+            <td>
+              <button type="button" class="btn btn-primary">edit</button>
+              <button type="button" class="btn btn-danger">hapus</button>
+            </td>
+          </tr>
+        @endforeach
      
     </table>
     </div>
