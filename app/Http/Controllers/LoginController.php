@@ -20,9 +20,23 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
- 
-            return redirect()->intended('admin');
+            
+            if(Auth::user()->roles == "admin"){
+                $request->session()->regenerate();
+
+                return redirect()->intended('admin');
+            }
+            else if(Auth::user()->roles == "jft"){
+                $request->session()->regenerate();
+
+                return redirect()->intended('jft_dash');
+            }
+            else if(Auth::user()->roles == "st"){
+                $request->session()->regenerate();
+
+                return redirect()->intended('st_dash');
+            }
+            
         }
 
         return back()->with('loginError', 'email or password not registered');
@@ -32,6 +46,7 @@ class LoginController extends Controller
     }
 
     public function signOut(Request $request){
+        
         Auth::logout();
  
         $request->session()->invalidate();

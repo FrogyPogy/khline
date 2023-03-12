@@ -23,4 +23,5 @@ class PostsFactory extends Factory
             'pertanyaan' => $this->faker->paragraph(4)
         ];
     }
+
 }

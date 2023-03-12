@@ -32,7 +32,7 @@
 
 
     
-            <form action="/sign-in" method="post">
+            <form action='/sign-in' method="post">
                 @csrf
                 <div class="text-align:center">
                 <div class="card mx-auto row d-flex justify-content-center" style="width: 25rem;"> 

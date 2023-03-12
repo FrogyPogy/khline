@@ -19,8 +19,8 @@ class CreatePostsTable extends Migration
             $table->string('slug')->unique();
             $table->string('penanya');
             $table->string('email');
-            $table->string('kategori');
-            $table->integer('kode_provinsi');
+            $table->foreignId('kategori_id');
+            $table->foreignId('provinsi_id');
             $table->text('pertanyaan');
             $table->timestamp('published_at')->nullable();
             $table->timestamps();

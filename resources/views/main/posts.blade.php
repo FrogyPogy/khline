@@ -8,7 +8,7 @@
             <h2>{{ $p->judul }}</a></h2>
             <text>{{ $p->pertanyaan }}</text>
             <div class="mt-3">
-            <a href="/home/{{$p->id}}" class="link-info">lihat jawaban</a>
+            <a href="/home/{{ $p->slug }}" class="link-info">lihat jawaban</a>
         </article>
     @endforeach
 
@@ -30,42 +30,40 @@
             <label for="message-text" class="col-form-label">Judul</label>
             <input type="text" class="form-control" name="input_judul" id="input_judul"></input>
         </div>
-        <div class="mb-3">
-            <label for="message-text" class="col-form-label">Slug</label>
-            <input type="text" class="form-control" name="input_slug" id="input_slug"></input>
-        </div>
 
         <div class="mb-3">
             <label for="message-text" class="col-form-label">Kategori kasus</label>
             <div class="dropdown">
-                <select name="kategori" id="kategori" class="form-control">
-                    <option value="Warisan" class="text-center">Warisan</option>
-                    <option value="Korupsi" class="text-center">Korupsi</option>
-                    <option value="Sertifikat" class="text-center">Sertifikat</option>
-                    <option value="HAM" class="text-center">HAM</option>
+                <select name="kategori_id" id="kategori_id" class="form-control">
+                    <option value="" class="text-center">- Pilih Kategori -</option>
+                    @foreach($kategori as $k)
+                    <option value="{{ $k->id }}" class="text-center">{{ $k->nama }}</option>
+                    @endforeach
+                    
                 </select>
             </div>
         </div>
-                <!-- <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Provinsi</label>
-                    <div class="dropdown">
-                        <select name="provinsi" id="provinsi" class="form-control">
-                            <option value="" class="text-center">--pilih provinsi--</option>
-                        </select>
-                    </div>
-                </div> -->
-                <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Provinsi</label>
-                    <input type="number" class="form-control" name="input_provinsi" id="input_provinsi"></input>
-                </div>
-                <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Pertanyaan</label>
-                    <textarea class="form-control" name="input_pertanyaan" id="input_pertanyaan"></textarea>
-                </div>
-                <div class="mb-3">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
-                </div>
-                </form>
+
+        <div class="mb-3">
+            <label for="message-text" class="col-form-label">Provinsi</label>
+            <div class="dropdown">
+                <select name="provinsi_id" id="provinsi_id" class="form-control">
+                    <option value="" class="text-center">- Pilih Provinsi -</option>
+                    @foreach($provinsi as $prov)
+                    <option value="{{ $prov->id }}" class="text-center">{{ $prov->nama }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+    
+        <div class="mb-3">
+            <label for="message-text" class="col-form-label">Pertanyaan</label>
+            <textarea class="form-control" name="input_pertanyaan" id="input_pertanyaan"></textarea>
+        </div>
+        <div class="mb-3">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Kirim Pertanyaan</button>
+        </div>
+    </form>
 
 @endsection

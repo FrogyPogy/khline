@@ -65,6 +65,18 @@
     margin-right: 10px;
 }
 
+.btn-side {
+    border: none;
+    color: white;
+    outline: none;
+    padding: 0;
+}
+
+.sidebar .nav-list .active,
+.btn-side:hover {
+    background-color: #8974ff;
+}
+
 .sidebar .nav-list .active,
 .nav-link:hover {
     background-color: #8974ff;

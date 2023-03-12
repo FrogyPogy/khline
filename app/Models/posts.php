@@ -14,4 +14,10 @@ class posts extends Model
     public function answer(){
         return $this->hasOne(Answer::class);
     }
+    public function kategori(){
+        return $this->belongsTo(Kategori::class);
+    }
+    public function provinsi(){
+        return $this->belongsTo(Provinsi::class);
+    }
 }

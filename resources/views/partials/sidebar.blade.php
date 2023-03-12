@@ -35,15 +35,15 @@
        <span class="tooltip">Laporan</span>
      </li>
 	 
-     <li>
+     <li class="ms-2">
       <form action="/sign-out" method="post">
         @csrf
-        <button type="submit" class="nav-link">
+        <button type="submit" class="btn btn-danger" "rules" style="background-color: Transparent; border: none;">
         <i class="bi bi-box-arrow-right"></i>
-         <span class="links_name">Keluar</span>
-</button>
+         <span class="links_name">Logout</span>
+        </button>
       </form>
-       <span class="tooltip">Keluar</span>
+       <span class="tooltip">Logout</span>
      </li>
      <li class="profile">
         <div class="profile-details">

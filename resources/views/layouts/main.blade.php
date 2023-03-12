@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="bg-main">
-        @include('partials.navbar');
+        @include('partials.navbar')
         <div class="container mt-5 cm">
             <br><br>
             <h1>Layanan Umum Konsultasi</h1>

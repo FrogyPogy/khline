@@ -5,7 +5,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <a class="nav-link" href="#">About Us</a>
                 <a class="nav-link" href="#">Contact</a>
-                <a href="/sign-in"  class="btn btn-primary" role="button">Sign-in</a>
+                <a href="{{ url('sign-in') }}"  class="btn btn-primary" role="button">Sign-in</a>
             </div>
         </div>
     </div>

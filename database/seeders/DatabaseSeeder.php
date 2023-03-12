@@ -6,7 +6,8 @@ use Illuminate\Database\Seeder;
 use App\Models\posts;
 use App\Models\Answer;
 use App\Models\User;
-
+use App\Models\Kategori;
+use App\Models\Provinsi;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,6 +15,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+
     public function run()
     {
         User::create([
@@ -24,13 +26,43 @@ class DatabaseSeeder extends Seeder
             'roles' => 'admin'
         ]);
 
+        $allKategori = ["Anak", "Asuransi", "Bantuan Hukum", "Hak asuh", "Hak Cipta",
+        "Hak Merek", "Hak Paten", "ITE", "Korupsi", "Hibah", "Ilegal Logging", "Jual Beli",
+        "KDRT", "Kebakaran", "Kelalaian", "Lakalantas", "Leasing", "Narkoba", "Pernikahan",
+        "Pembunuhan", "Pemerkosaan", "Pemerasan", "Penadahan", "Pelecehan", "Pencurian",
+        "Pencurian dengan Pemberatan", "Penganiayaan", "Pengrusakan", "Penggelapan",
+        "Penghasutan", "Penipuan", "Penyelundupan", "Perburuhan",
+        "Perceraian Pengadilan Agama", "Perceraian Pengadilan Negeri", "Perdagangan Orang",
+        "Perjudian", "Perlindungan Anak", "Persetubuhan", "Sajam/Bahan peledak",
+        "Sengketa Tanah", "Wakaf",  "Wanpresentasi/Ingkar", "Warisan"];
+
+        $allProvinsi = ["Aceh","Sumatera Utara","Sumatera Selatan","Sumatera Barat",
+        "Bengkulu","Riau","Kepulauan Riau", "Jambi","Lampung","Bangka Belitung","Banten",
+        "DKI Jakarta","Jawa Barat","Jawa Tengah","DI Yogyakarta","Jawa Timur",
+        "Kalimantan Barat","Kalimantan Timur","Kalimantan Selatan","Kalimantan Tengah",
+        "Kalimantan Utara","Bali","NTT","NTB","Gorontalo","Sulawesi Utara",
+        "Sulawesi Barat","Sulawesi Tengah","Sulawesi Tenggara","Sulawesi Selatan",
+        "Maluku Utara","Maluku","Papua","Papua Barat"];
+
+        foreach($allKategori as $key){
+            Kategori::create([
+                'nama' => $key
+            ]);
+        }
+
+        foreach($allProvinsi as $val){
+            Provinsi::create([
+                'nama' => $val
+            ]);
+        }
+
         posts::create([
             'judul' => 'Pertanyaan pertama',
             'slug' => 'pertanyaan-pertama',
             'penanya' => 'jack',
             'email' => 'jack@gmail.com',
-            'kategori' => 'Warisan',
-            'kode_provinsi' => 20,
+            'kategori_id' => 2,
+            'provinsi_id' => 18,
             'pertanyaan' => 'Lorem ipsum dolor sit amet consectetur adipisicing
             elit. Labore sed non ea placeat. Iure nostrum alias fuga nihil labore
             culpa ex provident voluptas nam, in laborum consequatur minus itaque
