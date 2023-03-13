@@ -32,8 +32,28 @@
     <div class="h5 mt-5 mb-4 w-100">Daftar Pertanyaan Masuk</div>
     <div class="card p-4 rounded-4">
     <table id="example" class="table rounded-1" style="width:100%">
-        <thead></thead>
-        <tbody></tbody>
+        <thead>
+            <tr>
+                <th>Penanya</th>
+                <th>Judul Pertanyaan</th>
+                <th>Kategori</th>
+                <th>Status</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach($newpost as $data)
+            <td><h5>{{ $data->penanya }}</h5>
+            <p>{{ $data->provinsi->nama }}</p></td>
+            <td>{{ $data->judul }}</td>
+            <td>{{ $data->kategori->nama }}</td>
+            <td>Baru</td>
+            <td>
+              <a href="{{ url('teruskan', $data->id) }}" type="button" class="btn btn-primary"><i class="bi bi-arrow-left"></i> teruskan</a>  
+              <a href='#' type="button" class="btn btn-success"><i class="bi bi-eye"></i> lihat</a>
+            </td>
+        @endforeach
+        </tbody>
     </table>
 
 @endsection

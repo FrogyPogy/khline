@@ -44,11 +44,19 @@ Route::middleware('auth')->group(function(){
     Route::get('laporan',[AdminController::class, 'laporan']);
 
     //Admin-pertanyaan
-    Route::get('pertanyaan',[AdminController::class, 'pertanyaan']);
+    Route::get('pertanyaan',[PostsController::class, 'showPertanyaan']);
 
     //Admin tambah anggota
     Route::get('/register',[RegisterController::class, 'index']);
     Route::post('/register',[RegisterController::class, 'store']);
+
+    Route::get('teruskan/{id}',[AdminController::class,'kirimPertanyaan']);
+
+    Route::get('/test',[AdminController::class,'test']);
+
+    Route::get('anggota/{id}',[AdminController::class, 'editUser']);
+
+    Route::post('update_anggota/{id}',[AdminController::class, 'updateUser']);
 
     //Penyuluh-dashboard
     Route::get('jft_dash',[JftController::class, 'dashboard']);

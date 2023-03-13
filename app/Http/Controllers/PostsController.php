@@ -7,6 +7,7 @@ use App\Models\posts;
 use App\Models\Kategori;
 use App\Models\Provinsi;
 
+
 class PostsController extends Controller
 {
     //show all question in class model posts
@@ -18,6 +19,14 @@ class PostsController extends Controller
             "posts" => posts::all(),
             "kategori" => $kategories,
             "provinsi" => $provinsi
+        ]);
+    }
+
+    public function showPertanyaan(){
+        $new = posts::doesntHave('answer')->get();
+
+        return view('admin/admin_pertanyaan',[
+            "newpost" => $new
         ]);
     }
 

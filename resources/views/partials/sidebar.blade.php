@@ -7,28 +7,28 @@
     <ul class="nav-list" id="nav-list">
       @auth
       <li>
-        <a class="nav-link active" href='admin'>
+        <a class="nav-link active" href="{{ url('admin') }}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a class="nav-link " href='anggota'>
+       <a class="nav-link " href="{{ url('anggota') }}">
          <i class='bx bx-user' ></i>
          <span class="links_name">@yield('item2')</span>
        </a>
        <span class="tooltip">@yield('item2')</span>
      </li>
      <li>
-       <a class="nav-link " href='pertanyaan'>
+       <a class="nav-link " href="{{ url('pertanyaan') }}">
          <i class='bx bx-chat' ></i>
          <span class="links_name">@yield('item3')</span>
        </a>
        <span class="tooltip">@yield('item3')</span>
      </li>
      <li>
-       <a class="nav-link" href='laporan'>
+       <a class="nav-link" href="{{ url('laporan') }}">
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Laporan</span>
        </a>
@@ -49,7 +49,7 @@
         <div class="profile-details">
            <div class="name_job">
               <div class="name">{{ auth()->User()->nama }}</div>
-              <div class="email">{{ auth()->User()->email }}</div>
+              <div class="email">{{ auth()->User()->jabatan }}</div>
            </div>
          </div>
          <i class="fa fa-bars" id="bars"></i>>

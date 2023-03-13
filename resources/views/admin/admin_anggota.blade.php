@@ -60,10 +60,10 @@
             <td><h5>{{ $a->nama }}</h5>
               <p>{{ $a->jabatan }}</p></td>
             <td>20</td>
-            <td>{{ $a->status }}</td>
+            <td><p style="color:#99CF00;">{{ $a->status }}</p></td>
             <td>
-              <button type="button" class="btn btn-primary">edit</button>
-              <button type="button" class="btn btn-danger">hapus</button>
+              <a href="{{ url('anggota', $a->id) }}" type="button" class="btn btn-primary"><i class="bi bi-pen"></i> edit</a>  
+              <a href='/test' type="button" class="btn btn-danger"><i class="bi bi-trash"></i> hapus</a>
             </td>
           </tr>
         @endforeach

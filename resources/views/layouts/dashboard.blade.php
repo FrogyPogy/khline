@@ -8,11 +8,11 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <html lang="en" data-bs-theme="dark">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" type="text/css"> 
     <title>Kemenkumham | Konsultasi Admin Dashboard</title>
 </head>
 <body>
-  @include('partials.sidebar');
+  @include('partials.sidebar')
   
   <section class="home-section">
     <div class="container-fluid">
