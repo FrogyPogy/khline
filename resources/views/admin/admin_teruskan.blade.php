@@ -43,6 +43,8 @@
         </thead>
 
         <tbody>
+
+    
         @foreach($jft as $j)
           <tr>
             <td><h5>{{ $j->nama }}</h5>
@@ -50,7 +52,12 @@
             <td>20</td>
             <td><p style="color:#99CF00;">{{ $j->status }}</p></td>
             <td>
-              <a href="#" type="button" class="btn btn-primary"><i class="bi bi-send"></i></i> Kirim</a>  
+            <form action="{{ url('kirim') }}" method="post">
+                @csrf
+                <input name="user_id" type="hidden" value="{{$j->id}}">
+                <input name="post_id" type="hidden" value="{{$post->id}}">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-send"> Kirim</i></button>
+            </form>  
             </td>
           </tr>
         @endforeach

@@ -16,8 +16,8 @@ class CreateAnswersTable extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('posts_id');
-            $table->string('penjawab');
-            $table->text('jawaban');
+            $table->foreignId('user_id');
+            $table->text('jawaban')->default('kosong');
             $table->timestamp('verified_at')->nullable();
             $table->timestamp('answered_at')->nullable();
             $table->timestamps();

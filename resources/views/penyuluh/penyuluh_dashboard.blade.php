@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+@extends('layouts.dashboard_jft')
 
 @section('institute_div')
     Bidang Hukum
@@ -28,7 +28,7 @@
     <h2>Dashboard</h2>
 @endsection
 
-@section('container')
+@section('container_jft')
     <div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
         <div class="col">
           <div class="card rounded-4  ">
@@ -62,7 +62,7 @@
         <div class="col">
           <div class="card rounded-4 ">
             <div class="card-body">
-              <p class="text-center">Evaluasi Jawaban/p>
+              <p class="text-center">Evaluasi Jawaban</p>
               <canvas id="myChart6" style="width:100%;max-width:600px"></canvas>
             </div>
           </div>

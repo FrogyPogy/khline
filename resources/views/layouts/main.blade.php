@@ -51,10 +51,8 @@
                 --Urutkan Berdasarkan--
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Warisan</a></li>
-                <li><a class="dropdown-item" href="#">Korupsi</a></li>
-                <li><a class="dropdown-item" href="#">Sertifikat</a></li>
-                <li><a class="dropdown-item" href="#">HAM</a></li>
+                <li><a class="dropdown-item" href="#">Terbaru</a></li>
+                <li><a class="dropdown-item" href="#">Terlama</a></li>
             </ul>
         </div>
         <!--Main Content-->

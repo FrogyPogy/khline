@@ -52,12 +52,17 @@ Route::middleware('auth')->group(function(){
 
     Route::get('teruskan/{id}',[AdminController::class,'kirimPertanyaan']);
 
+    Route::post('kirim',[AdminController::class, 'store']);
+
     Route::get('/test',[AdminController::class,'test']);
 
     Route::get('anggota/{id}',[AdminController::class, 'editUser']);
 
     Route::post('update_anggota/{id}',[AdminController::class, 'updateUser']);
 
+});
+
+Route::middleware('auth')->group(function(){
     //Penyuluh-dashboard
     Route::get('jft_dash',[JftController::class, 'dashboard']);
 
@@ -70,6 +75,9 @@ Route::middleware('auth')->group(function(){
     //Penyuluh-evaluasi
     Route::get('jft_eval',[JftController::class, 'evaluasi']);
 
+    //Penyuluh simpan jawaban
+    Route::post('jft_update',[JftController::class,'store']);
+
     //Struktural-dashboard
     Route::get('st_dash',[StrukturalController::class, 'dashboard']);
 
@@ -81,9 +89,7 @@ Route::middleware('auth')->group(function(){
 
     //Struktural-notifikasi
     Route::get('st_notif',[StrukturalController::class, 'notifikasi']);
-
 });
-
 
 //Admin-Settings
 // Route::get('/admin_s',function(){

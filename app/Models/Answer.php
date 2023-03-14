@@ -12,4 +12,9 @@ class Answer extends Model
     public function posts(){
         return $this->belongsTo(posts::class);
     }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    protected $fillable = ['jawaban', 'answered_at'];
 }

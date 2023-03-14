@@ -7,28 +7,28 @@
     <ul class="nav-list" id="nav-list">
       
       <li>
-        <a class="nav-link active" href="{{ url('admin') }}">
+        <a class="nav-link active" href="{{ url('jft_dash') }}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a class="nav-link " href="{{ url('anggota') }}">
+       <a class="nav-link " href="{{ url('jft_notif') }}">
          <i class='bx bx-user' ></i>
          <span class="links_name">@yield('item2')</span>
        </a>
        <span class="tooltip">@yield('item2')</span>
      </li>
      <li>
-       <a class="nav-link " href="{{ url('pertanyaan') }}">
+       <a class="nav-link " href="{{ url('jft_eval') }}">
          <i class='bx bx-chat' ></i>
          <span class="links_name">@yield('item3')</span>
        </a>
        <span class="tooltip">@yield('item3')</span>
      </li>
      <li>
-       <a class="nav-link" href="{{ url('laporan') }}">
+       <a class="nav-link" href="{{ url('jft_lapor') }}">
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Laporan</span>
        </a>
@@ -54,6 +54,5 @@
          </div>
          <i class="fa fa-bars" id="bars"></i>>
      </li>
-     
     </ul>
   </div>

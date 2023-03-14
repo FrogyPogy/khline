@@ -78,7 +78,7 @@ class DatabaseSeeder extends Seeder
 
         Answer::create([
             'posts_id' => 1,
-            'penjawab' => 'eko',
+            'user_id' => 2,
             'jawaban' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Distinctio odit unde dolor nisi autem minus nemo.' 
         ]);

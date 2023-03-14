@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\posts;
-
+use App\Models\Answer;
 class AdminController extends Controller
 {
     public function dashboard(){
@@ -26,6 +26,21 @@ class AdminController extends Controller
             "jft" => $jft,
             "post" => $id
         ]);
+    }
+
+    public function store(Request $request){
+        $user = User::findorfail($request->user_id);
+        $user->update(['status' => 'menjawab']);
+
+        $answer = new Answer;
+        $answer->posts_id = $request->post_id;
+        $answer->user_id = $request->user_id; 
+        $answer->save();
+
+        //Send session for notification success register
+        $request->session()->flash('success', 'Pertanyaan berhasil dikirim');
+
+        return redirect('pertanyaan');
     }
 
     public function laporan(){

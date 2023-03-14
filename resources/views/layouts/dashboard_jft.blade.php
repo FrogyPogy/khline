@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <html lang="en" data-bs-theme="dark">
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" type="text/css"> 
-    <title>Kemenkumham | Konsultasi Admin Dashboard</title>
+    <title>Kemenkumham | Konsultasi Penyuluh Dashboard</title>
 </head>
 <body>
-  @include('partials.sidebar')
+  @include('partials.sidebar_jft')
  
   <section class="home-section">
     <div class="container-fluid">
